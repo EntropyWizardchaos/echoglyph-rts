@@ -1,0 +1,90 @@
+{
+  "version": 1,
+  "created": "2025-11-12T21:41:02.485620Z",
+  "policy": {
+    "max_symbols": 10,
+    "min_separability_silhouette": 0.5,
+    "min_accuracy": 0.75
+  },
+  "symbols": [
+    {
+      "id": 1,
+      "name": "G1_approach_scan",
+      "rts_template": {
+        "ici_seq": [
+          0.12,
+          0.12,
+          0.24,
+          0.12,
+          0.12
+        ],
+        "tempo": 1.0,
+        "centroid": 6000,
+        "bw": 1200
+      }
+    },
+    {
+      "id": 2,
+      "name": "G2_hold",
+      "rts_template": {
+        "ici_seq": [
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2
+        ],
+        "tempo": 0.8,
+        "centroid": 5500,
+        "bw": 900
+      }
+    },
+    {
+      "id": 3,
+      "name": "G3_object_A",
+      "rts_template": {
+        "ici_seq": [
+          0.1,
+          0.18,
+          0.1,
+          0.18,
+          0.1
+        ],
+        "tempo": 1.2,
+        "centroid": 6500,
+        "bw": 1000
+      }
+    },
+    {
+      "id": 4,
+      "name": "G4_object_B",
+      "rts_template": {
+        "ici_seq": [
+          0.14,
+          0.14,
+          0.14,
+          0.28,
+          0.14
+        ],
+        "tempo": 1.1,
+        "centroid": 7000,
+        "bw": 1400
+      }
+    },
+    {
+      "id": 5,
+      "name": "G5_end",
+      "rts_template": {
+        "ici_seq": [
+          0.08,
+          0.3,
+          0.3,
+          0.08
+        ],
+        "tempo": 0.9,
+        "centroid": 5200,
+        "bw": 800
+      }
+    }
+  ]
+}

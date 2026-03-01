@@ -1,0 +1,69 @@
+# Whale Agent Stage Card (template v0)
+# Fill one per promotion or major change; commit as append-only.
+# Save filename like: WA_<WhaleID>_stage_<S#>_<YYYYMMDD>.yaml
+
+whale_id: "<WhaleID>"             # e.g., SW-2025-Alpha01
+agent_id: "WA-<WhaleID>"
+
+stage:
+  current: "S0"                   # S0..S6
+  name: "Seed"
+  date_promoted: "YYYY-MM-DD"
+  prev_stage: null                # or "S-1"
+
+data_summary:
+  hours_total: 0.0
+  sessions: 0
+  contexts:
+    depth_bands: ["0-100m"]       # list covered
+    sea_states: ["calm"]          # e.g., calm, moderate
+    day_night: ["day"]
+  notes: ""
+
+metrics:
+  click_detection_auc: 0.00
+  glyph_clustering_silhouette: 0.00
+  coda_family_accuracy: 0.00
+  ethogram_balanced_accuracy: 0.00
+  ece: 0.00
+  arousal_auc: 0.00
+  false_alarm_rate: 0.00
+  drift_delta: 0.00               # week-to-week embedding shift
+
+gates_passed:
+  confidence_calibrated: false
+  welfare_ok: false
+  separability_ok: false
+  generalization_ok: false
+
+glyph_bank:
+  version: 1
+  symbols:
+    - id: 1
+      label: "G1_approach_scan"
+      status: "active"            # active|candidate|retired
+    - id: 2
+      label: "G2_hold"
+      status: "active"
+
+checkpoints:
+  core_encoder_hash: "<sha256>"
+  adapter_hash: "<sha256>"
+  ethogram_head_hash: "<sha256>"
+  glyph_head_hash: "<sha256>"
+  training_data_hash: "<sha256>"  # hash of manifest for reproducibility
+
+policy_unlocks:
+  decode_only: true
+  managed_care_prompts: false
+  field_prompts_allowed: false
+
+ops:
+  reviewers: ["name1", "name2"]
+  permit_refs: ["MMPA-XXXX"]
+  notes: ""
+
+signatures:
+  signed_by: ["name1"]
+  signed_at: "YYYY-MM-DDTHH:MM:SSZ"
+  card_hash: "<sha256>"           # computed after filling

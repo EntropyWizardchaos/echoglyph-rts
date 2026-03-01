@@ -1,0 +1,55 @@
+{
+  "files": {
+    "raw_audio": "WAV/FLAC, 24-bit, fs=96k/192k",
+    "imu": "CSV or binary: t,ax,ay,az,gx,gy,gz",
+    "depth_temp": "CSV: t,depth_m,temp_C",
+    "events": "JSONL: t,event,type,meta",
+    "features": "Parquet/CSV: per-click features (see below)",
+    "renders": "PNG/MP4 of R\u2013T\u2013S panels (optional)"
+  },
+  "per_click_features": [
+    "t_click_s",
+    "ici_s",
+    "tempo_rel",
+    "spec_centroid_hz",
+    "spec_bandwidth_hz",
+    "snr_db",
+    "amplitude_pa_rms"
+  ],
+  "labels": {
+    "coda_id": "string or int",
+    "glyph_id": "int (0..N-1), optional",
+    "confidence": "0..1"
+  },
+  "ui_packet": {
+    "t0_s": "start time",
+    "depth_m": "current depth",
+    "rts": [
+      {
+        "idx": 0,
+        "R": 0.12,
+        "T": 1.08,
+        "S": {
+          "centroid": 6000,
+          "bw": 1200,
+          "snr": 18
+        }
+      },
+      {
+        "idx": 1,
+        "R": -0.05,
+        "T": 1.02,
+        "S": {
+          "centroid": 5900,
+          "bw": 1100,
+          "snr": 20
+        }
+      }
+    ],
+    "glyph": {
+      "id": 3,
+      "p": 0.83
+    },
+    "arousal": 0.22
+  }
+}
