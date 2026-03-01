@@ -109,5 +109,5 @@ If you use R–T–S in your work:
 
 ```
 Robinson, H. (2025). EchoGlyph R–T–S: Geometric visualization of sperm whale
-coda structure. https://github.com/[your-handle]/echoglyph-rts
+coda structure. https://github.com/[EntropyWizardchaos]/echoglyph-rts
 ```
